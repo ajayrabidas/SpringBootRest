@@ -1,4 +1,58 @@
-CRUD Operation demo project using Spring Boot 4.x.x
+CRUD Operation project using Spring Boot 4.0.5
 
+Used:
+    Java 17
+    Spring Boot 4.0.5
+    H2 Database
+
+Sample Request:
+Post: Add single product:
+URL: http://localhost:8080/api/products
+Body:
+    {
+      "name": "Product1",
+      "description": "This is a sample product1",
+      "price": 19.99
+    }
+
+
+Post: Add multiple products:
+URL: http://localhost:8080/api/products/bulk
+Body:
+    [
+      { "name": "Laptop Pro", "description": "High-end workstation for developers", "price": 1200.00 },
+      { "name": "Wireless Mouse", "description": "Ergonomic silent click mouse", "price": 25.50 },
+      { "name": "Mechanical Keyboard", "description": "RGB backlit with blue switches", "price": 75.99 },
+      { "name": "4K Monitor", "description": "27-inch IPS display for designers", "price": 350.00 },
+      { "name": "USB-C Hub", "description": "7-in-1 adapter with HDMI and SD ports", "price": 40.00 },
+      { "name": "Noise Cancelling Headphones", "description": "Over-ear bluetooth headphones", "price": 199.99 },
+      { "name": "Gaming Chair", "description": "Ergonomic leather chair with lumbar support", "price": 250.00 },
+      { "name": "Webcam HD", "description": "1080p camera with built-in microphone", "price": 60.45 },
+      { "name": "External SSD", "description": "1TB high-speed portable storage", "price": 110.00 },
+      { "name": "Smart Watch", "description": "Fitness tracker with heart rate monitor", "price": 150.25 }
+    ]
+
+
+Get All Products:
+URL: http://localhost:8080/api/products
+
+Get Product By ID:
+URL: http://localhost:8080/api/products/2
+
+Put: Update existing product:
+URL: http://localhost:8080/api/products/2
+Body:
+    {
+      "id": 2,
+      "name": "Updated Product",
+      "description": "Updated description",
+      "price": 99.99
+    }
+
+Put: Delete existing product:
+URL: http://localhost:8080/api/products/3
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Reference for more details:
 https://medium.com/@akademixs247/building-a-crud-application-with-spring-boot-and-rest-api-bb8a1e22c37f
+
